@@ -1,5 +1,32 @@
 # Changelog
 
+## v0.4.0 (2026-08-24)
+
+Added two Skills extracted from the Codex continuation template and the
+V2 multi-agent protocol:
+
+- `completion-audit` — before declaring a non-trivial task done, derive
+  requirements, identify authoritative evidence for each, verify against
+  the actual current state, and only declare done when every requirement
+  has its own ✅. Mirrors the completion-audit section of the Codex goal
+  continuation template (`ext/goal/templates/goals/continuation.md`).
+- `fork-context-decision` — pick `all` / `N` / `none` for `fork_turns`
+  explicitly, not by default. Mirrors the `fork_turns` semantics in
+  Codex's V2 multi-agent protocol (`core/src/session/multi_agents.rs`).
+
+Updated two Skills to v1.0 based on deeper reads of the Codex source:
+
+- `goal-persistence` v1.0 — incorporated the completion-audit and
+  blocked-audit sections from the Codex continuation template. Added the
+  token-budget reporting rule. Aligned language with the canonical
+  "treat completion as unproven" principle.
+- `parallel-fanout` v1.0 — added the explicit-spawn principle (P-20:
+  spawn is opt-in, not auto). Added `max_concurrency` awareness.
+  Cross-referenced `fork-context-decision` and `delegate-with-context`.
+  Added `completion-audit` on the aggregation before declaring done.
+
+Total Skills: 12 (10 v1.0 + 2 new).
+
 ## v0.3.0 (2026-08-24)
 
 Added two Skills that close the long-running task loop:
@@ -12,7 +39,7 @@ Added two Skills that close the long-running task loop:
   cheap / medium / main and pick the matching `model_config_id`. Mirrors
   `codex-rs/model-provider-info/` + `codex-rs/models-manager/`.
 
-Manifest bumped to `0.3.0`. Total Skills: 10.
+Total Skills: 10.
 
 ## v0.2.0 (2026-08-24)
 
