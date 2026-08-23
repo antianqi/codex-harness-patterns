@@ -15,13 +15,15 @@ A focused collection of Skills distilled from the **OpenAI Codex harness v0.149.
 model (`codex-rs/core/`). These Skills teach a MiniMax Code agent how to survive long-running
 multi-step tasks without losing focus, blowing its token budget, stalling on serial work,
 shipping unverified changes, burning context on bad sub-agent briefs, drifting from the
-original goal, or paying main-model prices for cheap-model work.
+original goal, paying main-model prices for cheap-model work, or losing track of which
+sub-agent is doing what.
 
 ## Releases
 
 | Version | What it ships | When |
 |---|---|---|
-| [`v0.4.0`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v0.4.0) | 12 Skills (current) | 2026-08-24 |
+| [`v0.5.0`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v0.5.0) | 14 Skills (current) | 2026-08-24 |
+| [`v0.4.0`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v0.4.0) | 12 Skills | 2026-08-24 |
 | [`v0.3.0`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v0.3.0) | 10 Skills | 2026-08-24 |
 | [`v0.2.0`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v0.2.0) | 8 Skills | 2026-08-24 |
 | [`v0.1.0`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v0.1.0) | 4 Skills (initial) | 2026-08-24 |
@@ -29,7 +31,7 @@ original goal, or paying main-model prices for cheap-model work.
 See the [Releases page](https://github.com/antianqi/codex-harness-patterns/releases) for full
 notes.
 
-## What this Plugin adds (v0.4.0, 12 Skills)
+## What this Plugin adds (v0.5.0, 14 Skills)
 
 | # | Skill | When to activate |
 |---|---|---|
@@ -45,6 +47,8 @@ notes.
 | 10 | `model-router` | About to call `task` for a non-trivial sub-task, or about to spend the main model on work a cheaper model could do. |
 | 11 | `completion-audit` | About to say "done" / "complete" / "ship it" on a non-trivial task. Derives requirements, identifies authoritative evidence, verifies each. |
 | 12 | `fork-context-decision` | About to call `task` to hand off a sub-task. Decides how much parent context to give the sub-agent via the `fork_turns` parameter. |
+| 13 | `subagent-family-tracking` | Spawned a sub-agent (or have one running). Track the parent/child tree so you do not lose children, duplicate work, or leave anyone running. |
+| 14 | `goal-token-budgeting` | The user set an explicit `token_budget` on a goal. Track running usage against the budget and report the final number on completion. |
 
 ## How to use this Plugin
 
@@ -64,7 +68,7 @@ from MiniMax Code's `/plugins` UI by searching for the contributor `antianqi` an
    ```bash
    git clone https://github.com/antianqi/codex-harness-patterns.git
    cd codex-harness-patterns
-   git checkout v0.4.0   # or the latest release
+   git checkout v0.5.0   # or the latest release
    ```
 2. Copy `skills/` into your own copy of MiniMax-Code-Plugins under
    `plugins/<your-github-username>/codex-harness-patterns/skills/`, then add the matching
@@ -79,20 +83,22 @@ codex-harness-patterns/
 ├── README.md          ← you are here
 ├── CHANGELOG.md       ← version history
 ├── LICENSE            ← Apache-2.0
-├── plugin.json        ← manifest for the Plugin (name = codex-harness-patterns, version 0.4.0)
+├── plugin.json        ← manifest for the Plugin (name = codex-harness-patterns, version 0.5.0)
 └── skills/
     ├── tool-output-budget/
-    ├── context-pressure-compact/
-    ├── parallel-fanout/
+    ├── context-pressure-compact/    (v1.0)
+    ├── parallel-fanout/             (v1.0)
     ├── plan-stream-emit/
     ├── review-mode/
-    ├── delegate-with-context/
+    ├── delegate-with-context/       (v1.0)
     ├── world-state-tracking/
     ├── background-task/
-    ├── goal-persistence/
+    ├── goal-persistence/            (v1.0)
     ├── model-router/
     ├── completion-audit/
-    └── fork-context-decision/
+    ├── fork-context-decision/
+    ├── subagent-family-tracking/    (new in v0.5.0)
+    └── goal-token-budgeting/        (new in v0.5.0)
 ```
 
 ## Versioning
