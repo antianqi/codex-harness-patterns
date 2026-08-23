@@ -1,5 +1,19 @@
 # Changelog
 
+## v0.3.0 (2026-08-24)
+
+Added two Skills that close the long-running task loop:
+
+- `goal-persistence` — maintain an explicit north-star goal for the whole
+  thread that survives compactions and detects drift. Mirrors
+  `Op::SetThreadMemoryMode` + `EventMsg::ThreadGoalUpdated` in
+  `codex-rs/protocol/src/protocol.rs`.
+- `model-router` — before delegating a sub-task, classify the work into
+  cheap / medium / main and pick the matching `model_config_id`. Mirrors
+  `codex-rs/model-provider-info/` + `codex-rs/models-manager/`.
+
+Manifest bumped to `0.3.0`. Total Skills: 10.
+
 ## v0.2.0 (2026-08-24)
 
 Added four Skills that round out the long-running task toolkit:
@@ -17,7 +31,7 @@ Added four Skills that round out the long-running task toolkit:
   log file, poll on later turns. Mirrors `unified_exec` /
   `CleanBackgroundTerminals`.
 
-Manifest bumped to `0.2.0`. Total Skills: 8.
+Total Skills: 8.
 
 ## v0.1.0 (2026-08-24) — initial release
 

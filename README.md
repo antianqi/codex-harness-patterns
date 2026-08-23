@@ -14,21 +14,23 @@
 A focused collection of Skills distilled from the **OpenAI Codex harness v0.149.0** execution
 model (`codex-rs/core/`). These Skills teach a MiniMax Code agent how to survive long-running
 multi-step tasks without losing focus, blowing its token budget, stalling on serial work,
-shipping unverified changes, or burning context on bad sub-agent briefs.
+shipping unverified changes, burning context on bad sub-agent briefs, drifting from the
+original goal, or paying main-model prices for cheap-model work.
 
 ## Releases
 
 | Version | What it ships | When |
 |---|---|---|
-| [`v0.2.0`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v0.2.0) | 8 Skills (current) | 2026-08-24 |
+| [`v0.3.0`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v0.3.0) | 10 Skills (current) | 2026-08-24 |
+| [`v0.2.0`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v0.2.0) | 8 Skills | 2026-08-24 |
 | [`v0.1.0`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v0.1.0) | 4 Skills (initial) | 2026-08-24 |
 
 See the [Releases page](https://github.com/antianqi/codex-harness-patterns/releases) for full
 notes.
 
-## What this Plugin adds (v0.2.0)
+## What this Plugin adds (v0.3.0)
 
-Eight Skills, all Skill-only (no MCP server, no network access):
+Ten Skills, all Skill-only (no MCP server, no network access):
 
 | Skill | When to activate |
 |---|---|
@@ -40,6 +42,8 @@ Eight Skills, all Skill-only (no MCP server, no network access):
 | `delegate-with-context` | About to call `task` to hand off a sub-task; the full conversation history is too large to forward and a minimal-context brief would do. |
 | `world-state-tracking` | The task is long enough that the agent has lost the thread at least once, or `context-pressure-compact` is about to be applied. |
 | `background-task` | A command is expected to take > 30 seconds, or the user wants a long-running process to coexist with ongoing work. |
+| `goal-persistence` | A non-trivial task has just been stated (set the goal); the user has redirected (update the goal); or a `context-pressure-compact` is about to be applied (alignment check). |
+| `model-router` | About to call `task` for a non-trivial sub-task, or about to spend the main model on work a cheaper model could do. |
 
 ## How to use this Plugin
 
@@ -59,7 +63,7 @@ from MiniMax Code's `/plugins` UI by searching for the contributor `antianqi` an
    ```bash
    git clone https://github.com/antianqi/codex-harness-patterns.git
    cd codex-harness-patterns
-   git checkout v0.2.0   # or the latest release
+   git checkout v0.3.0   # or the latest release
    ```
 2. Copy `skills/` into your own copy of MiniMax-Code-Plugins under
    `plugins/<your-github-username>/codex-harness-patterns/skills/`, then add the matching
@@ -83,7 +87,9 @@ codex-harness-patterns/
     ├── review-mode/
     ├── delegate-with-context/
     ├── world-state-tracking/
-    └── background-task/
+    ├── background-task/
+    ├── goal-persistence/
+    └── model-router/
 ```
 
 ## Versioning
