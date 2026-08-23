@@ -1,0 +1,12 @@
+# Editor / OS noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Local scratch
+*.bak
+*.tmp
