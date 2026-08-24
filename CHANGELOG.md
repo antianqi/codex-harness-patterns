@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.0.1 (2026-08-25) — patch (documentation refresh)
+
+v1.0.0 收口后的文档微调:
+- `OVERVIEW.md` 全面刷新(23 Skills 按生命周期)
+- `PR-STATUS.md` 同步
+- PR #18 title 更新为 v1.0.0
+- 23 skills 主体不变
+
 ## v1.0.0 (2026-08-25) — MAJOR (Plugin 1.0 milestone)
 
 🎉 **Plugin 1.0** — 23 Skills 完整覆盖 agent 生命周期。
