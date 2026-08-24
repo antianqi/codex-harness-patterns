@@ -1,5 +1,32 @@
 # Changelog
 
+## v0.6.3 (2026-08-24) — patch (research milestone)
+
+阶段 1 周 1 完成 — `codex-rs/memories/` 21 文件深读,4 个新模式 🟢。
+
+### Added
+
+- 4 篇新知识笔记:
+  - `P-78-memory-phase1.md`(6KB)— Memory Phase 1:per-rollout extraction
+  - `P-79-memory-phase2.md`(8KB)— Memory Phase 2:global consolidation
+  - `P-80-memory-citation.md`(4KB)— MemoryCitation 协议 + 解析
+  - `P-84-memory-workspace-git.md`(8KB)— Memory workspace + git baseline
+- CATALOG 状态:`P-78 / P-79 / P-80 / P-84` 全部 🟡→🟢
+- CATALOG §9.2 状态列加上"状态"字段
+
+### Not changed
+
+- 18 skill 主体 / frontmatter / 输出契约
+- Plugin 主合约 / 触发条件
+
+### Roadmap progress
+
+| 阶段 | 状态 | 覆盖率 |
+|---|---|---|
+| 0 · 错判修正 | ✅ | 60%→62% |
+| 1 · 5 大核心 | 🟢 周 1 | 62%→64% |
+| 1 · 周 2 skills/ | ⏳ 下一步 | — |
+
 ## v0.6.2 (2026-08-24) — patch
 
 **诚实记录型 patch**:复盘发现 Plugin 实际只覆盖了 Codex 模式库的 ~60%,并启动 2-3 月系统性补完计划。
