@@ -1,5 +1,28 @@
 # Changelog
 
+## v0.7.0 (2026-08-24) — minor (research milestone: Phase 1 COMPLETE)
+
+**Plugin 里程碑** — 阶段 1 整圈收口,5 大核心 crate 全部完成。
+
+### Phase 1 整圈回顾
+
+| 周 | crate | 状态 | 发布 |
+|---|---|---|---|
+| 1 | `codex-rs/memories/` 21 文件 | ✅ | v0.6.3 |
+| 2 | `codex-rs/skills/` 10+ 文件 | ✅ | v0.6.4 |
+| 3 | `codex-rs/thread-store/` 40+ 文件 | ✅ | v0.6.5 |
+| 4 | `codex-rs/core-plugins/` 60+ 文件 + `codex-rs/prompts/` 4 套 | ✅ | **v0.7.0** |
+
+### Added
+
+- 5 篇新知识笔记(P-93/94/95/99 + P-164/165/166-168)
+- **Plugin 覆盖率 72% → 78%**(阶段 1 净增 16%)
+- CATALOG 状态:🟢 74→82 / 🟡 0→1
+
+### Not changed
+
+- 18 skill 主体 / frontmatter / 输出契约
+
 ## v0.6.5 (2026-08-24) — patch (research milestone)
 
 阶段 1 周 3 完成 — `codex-rs/thread-store/` 40+ 文件深读,**完整 session 持久化层**。
