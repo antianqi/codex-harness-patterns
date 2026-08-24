@@ -1,5 +1,19 @@
 # Changelog
 
+## v0.7.2 (2026-08-25) — patch (research milestone: Phase 2 Week 6)
+
+阶段 2 周 6 完成 — `codex-rs/tools/` 25+ 文件深读。
+
+### Added
+
+- 4 篇新知识笔记:
+  - `P-107-108-tool-discovery-search.md`(5KB)— Tool discovery + search
+  - `P-109-111-dynamic-mcp-tool.md`(6KB)— Dynamic + MCP tool
+  - `P-112-113-plugin-install-responses-api.md`(5KB)— Plugin install + Responses API
+  - `P-114-116-json-schema-image-response-history.md`(5KB)— JSON Schema + image + response
+- CATALOG 状态:🟢 92→100 / 🟡 5→3
+- **🟢 首次突破 100 个已掌握模式**
+
 ## v0.7.1 (2026-08-25) — patch (research milestone: Phase 2 Week 5)
 
 阶段 2 周 5 完成 — `codex-rs/core/src/agent/` + `core/session/` + `core/context_manager/` 关键未读模块。
