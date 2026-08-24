@@ -28,10 +28,45 @@ work at session end.
 | [`v0.4.0`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v0.4.0) | 12 Skills | 2026-08-24 |
 | [`v0.3.0`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v0.3.0) | 10 Skills | 2026-08-24 |
 | [`v0.2.0`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v0.2.0) | 8 Skills | 2026-08-24 |
+| [`v0.6.2`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v0.6.2) | 18 Skills (patch: catalog corrections + roadmap) | 2026-08-24 |
+| [`v0.6.1`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v0.6.1) | 18 Skills (frontmatter rewrite) | 2026-08-24 |
+| [`v0.6.0`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v0.6.0) | 18 Skills | 2026-08-24 |
+| [`v0.5.0`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v0.5.0) | 14 Skills | 2026-08-24 |
+| [`v0.4.0`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v0.4.0) | 12 Skills | 2026-08-24 |
+| [`v0.3.0`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v0.3.0) | 10 Skills | 2026-08-24 |
+| [`v0.2.0`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v0.2.0) | 8 Skills | 2026-08-24 |
 | [`v0.1.0`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v0.1.0) | 4 Skills (initial) | 2026-08-24 |
 
 See the [Releases page](https://github.com/antianqi/codex-harness-patterns/releases) for full
 notes.
+
+## v0.6.2 (this release) — patch
+
+> **Skill 主体不变**(18 个 0.x.y 版本号不变) · 元数据 + 文档更新
+
+这次 v0.6.2 是个"诚实记录"型 patch — 复盘发现 Plugin 实际只覆盖了 Codex 模式库的 ~60%,并启动 2-3 月系统性补完计划。
+
+### What changed
+
+- **`plugin.json`**:version `0.6.1` → `0.6.2`
+- **CATALOG §7 修正**:`P-49 Fork` / `P-50 Rollback` / `P-51 Recover` / `P-52 History Mode` 从 ⛔"范围外"改 🟡"待深读" — 实际实现是 `codex-rs/thread-store/` 40+ 文件
+- **CATALOG §8 修正**:`P-63 Skills runtime` / `P-64 Memory system` 从 ❌"不在 4 个重点"改 🟡"待深读" — **直接对应我们 Plugin 自身结构**
+- **CATALOG §9 新增**:`research-log/2026-08-24-resurvey-findings.md` 列出 ~100 个未研究模式草案,挑选 50+ 高价值列入
+- **RESEARCH-ROADMAP.md** 新建:2-3 月系统性补完计划(阶段 0-4)
+- **6 篇纠错笔记** 新建:`knowledge/P-{49,50,51,52,63,64}-*.md`
+
+### What did NOT change
+
+- 18 skill 主体(版本号全部不变)
+- 18 skill frontmatter(不动)
+- 18 skill 的输出契约 / 验证清单(不动)
+
+### What comes next
+
+- v0.7.0:周 1-4 深读 5 大核心 crate(memories / skills / thread-store / core-plugins / prompts)
+- v0.8.0:周 5-8 次重要 crate(core/agent / core/session / tools / rollout / models-manager / protocol)
+- v0.9.0:周 9-10 边角 crate 收口
+- v1.0.0:阶段 4 — 5 个新 skill(long-term-memory / skill-auto-select / plugin-author-helper / tool-discovery-pattern / session-branch-fork) + Plugin 大版本
 
 ## What this Plugin adds (v0.6.0, 18 Skills)
 

@@ -1,5 +1,29 @@
 # Changelog
 
+## v0.6.2 (2026-08-24) — patch
+
+**诚实记录型 patch**:复盘发现 Plugin 实际只覆盖了 Codex 模式库的 ~60%,并启动 2-3 月系统性补完计划。
+
+### Changed
+
+- `plugin.json`:version `0.6.1` → `0.6.2`
+- CATALOG §7 修正:`P-49 Fork` / `P-50 Rollback` / `P-51 Recover` / `P-52 History Mode` 从 ⛔ 改 🟡
+- CATALOG §8 修正:`P-63 Skills runtime` / `P-64 Memory system` 从 ❌ 改 🟡
+- CATALOG §9 新增:~100 个未研究模式草案
+- `RESEARCH-ROADMAP.md` 新建:2-3 月补完计划
+- 6 篇纠错笔记新增:`knowledge/P-{49,50,51,52,63,64}-*.md`
+
+### Not changed
+
+- 18 skill 主体(版本号全部不变)
+- 18 skill frontmatter
+- 18 skill 的输出契约 / 验证清单
+
+### Next
+
+- v0.7.0:周 1-4 深读 5 大核心 crate
+- v1.0.0:阶段 4 — 5 个新 skill + Plugin 大版本
+
 ## v0.6.1 (2026-08-24)
 
 **Trigger descriptions rewritten across all 18 Skills** for better LLM matching.
