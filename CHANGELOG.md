@@ -1,5 +1,18 @@
 # Changelog
 
+## v0.7.1 (2026-08-25) — patch (research milestone: Phase 2 Week 5)
+
+阶段 2 周 5 完成 — `codex-rs/core/src/agent/` + `core/session/` + `core/context_manager/` 关键未读模块。
+
+### Added
+
+- 4 篇新知识笔记:
+  - `P-134-138-agent-registry.md`(7KB)— AgentRegistry + 角色覆盖
+  - `P-140-142-context-manager.md`(5KB)— Arc<Vec> CoW + history_version
+  - `P-158-turn-suspension.md`(6KB)— 完整 9 步 suspend 流程
+  - `P-157-162-session-infrastructure.md`(5KB)— budget / MCP refresh / queue
+- CATALOG 状态:🟢 82→92 / 🟡 1→5
+
 ## v0.7.0 (2026-08-24) — minor (research milestone: Phase 1 COMPLETE)
 
 **Plugin 里程碑** — 阶段 1 整圈收口,5 大核心 crate 全部完成。
