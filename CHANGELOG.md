@@ -1,5 +1,31 @@
 # Changelog
 
+## v1.0.0 (2026-08-25) — MAJOR (Plugin 1.0 milestone)
+
+🎉 **Plugin 1.0** — 23 Skills 完整覆盖 agent 生命周期。
+
+### Added — 5 个新 Skill
+
+| # | Skill | 灵感来源 |
+|---|---|---|
+| 19 | `long-term-memory` | `codex-rs/memories/` |
+| 20 | `skill-auto-select` | `codex-rs/skills/` |
+| 21 | `plugin-author-helper` | `codex-rs/core-plugins/` |
+| 22 | `tool-discovery-pattern` | `codex-rs/tools/` |
+| 23 | `session-branch-fork` | `codex-rs/thread-store/` |
+
+### Plugin 覆盖率旅程
+
+- v0.6.2(开始):60%
+- v0.7.0(阶段 1):78%
+- v0.7.5(阶段 3):88%
+- **v1.0.0(阶段 4):90%+**
+
+### Not changed
+
+- 18 个原有 skill 主体不变
+- 原有 18 skill 的 frontmatter / 触发条件不变
+
 ## v0.7.2 (2026-08-25) — patch (research milestone: Phase 2 Week 6)
 
 阶段 2 周 6 完成 — `codex-rs/tools/` 25+ 文件深读。

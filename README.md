@@ -28,6 +28,7 @@ work at session end.
 | [`v0.4.0`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v0.4.0) | 12 Skills | 2026-08-24 |
 | [`v0.3.0`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v0.3.0) | 10 Skills | 2026-08-24 |
 | [`v0.2.0`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v0.2.0) | 8 Skills | 2026-08-24 |
+| [`v1.0.0`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v1.0.0) | 23 Skills (Plugin 1.0 milestone) | 2026-08-25 |
 | [`v0.7.5`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v0.7.5) | 18 Skills (research milestone: Phase 3) | 2026-08-25 |
 | [`v0.7.4`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v0.7.4) | 18 Skills (research milestone: Phase 2 Week 8) | 2026-08-25 |
 | [`v0.7.3`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v0.7.3) | 18 Skills (research milestone: Phase 2 Week 7) | 2026-08-25 |
@@ -77,7 +78,15 @@ notes.
 - v0.9.0:周 9-10 边角 crate 收口
 - v1.0.0:阶段 4 — 5 个新 skill(long-term-memory / skill-auto-select / plugin-author-helper / tool-discovery-pattern / session-branch-fork) + Plugin 大版本
 
-## What this Plugin adds (v0.6.0, 18 Skills)
+## What this Plugin adds (v1.0.0, 23 Skills)
+
+Twenty-three Skills, all Skill-only (no MCP server, no network access), covering the complete agent lifecycle:
+
+```
+planning → decomposition → sub-agent parallelism → execution →
+state tracking → tool discovery → skill/plugin authoring →
+memory persistence → session branching
+```
 
 | # | Skill | When to activate |
 |---|---|---|
@@ -99,6 +108,11 @@ notes.
 | 16 | `retry-with-backoff` | About to retry a `transient` error. State the policy first: max attempts, base delay, max delay, jitter, total time budget. |
 | 17 | `streaming-output-reader` | A tool returns a long stream (SSE / WebSocket / `tail -f` / large log). Read in bounded chunks, synthesize, never loop. |
 | 18 | `session-handoff` | The session is ending (user stepping away, time up, about to compact). Write a handoff file so next session can pick up in 30 seconds. |
+| 19 | `long-term-memory` | Design a cross-session long-term memory system (Phase 1/2 extract + consolidate + citation, git baseline diff, no-op gate). |
+| 20 | `skill-auto-select` | Design a Skill that an LLM can reliably discover, search, and invoke (3-layer matching, `$name` mention syntax, name-collision handling). |
+| 21 | `plugin-author-helper` | Author a marketplace Plugin (manifest format, multi-ecosystem, idempotency, 3-layer startup sync). |
+| 22 | `tool-discovery-pattern` | Design a tool that an LLM can discover (defer_loading, 7-type JSON schema, BTreeMap, request_plugin_install). |
+| 23 | `session-branch-fork` | Design a session-level fork / revert / recover / suspend (paginated history, lineage, CAS, bounded replay, subagent migration). |
 
 ## How to use this Plugin
 
