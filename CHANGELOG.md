@@ -1,23 +1,39 @@
 # Changelog
 
+## v0.6.1 (2026-08-24)
+
+**Trigger descriptions rewritten across all 18 Skills** for better LLM matching.
+
+Each `description:` frontmatter field now uses a structured 4-line format:
+
+```yaml
+description: |
+  <one-sentence purpose>.
+  USE WHEN: <comma-separated concrete signals and keywords>.
+  TRIGGER PHRASES: <user-original-language phrases the user might say>.
+  SKIP WHEN: <anti-patterns where this skill does not apply>.
+```
+
+This makes the description **keyword-greppable** (so the LLM can match on real signals
+like "ECONNREFUSED", "permission denied", "retries exceeded", "上下文满了" / "出错了" /
+"重试") instead of trying to interpret abstract prose.
+
+All 18 Skills have their trigger phrases now spelled out in both English and Chinese, so
+the LLM can match user language directly. Skill versions bumped to `0.1.1` (or
+`1.0.1` for the v1.0 skills). Manifest bumped to `0.6.1` (patch bump for frontmatter
+fixes).
+
+No new Skills, no behavioral changes — just better trigger descriptions so the LLM
+actually uses the Skills at the right time.
+
 ## v0.6.0 (2026-08-24)
 
-Added four Skills that close the **error / streaming / session-end loop**:
+Added four Skills:
 
-- `error-recovery-strategy` — 4-bucket classification (transient /
-  deterministic / stale / unknown) → 5-action decision tree (retry /
-  switch / fallback / refresh-then-retry / ask-user / skip). Mirrors
-  the `code-mode` reconnect philosophy and `MultiAgentMode::ExplicitRequestOnly`
-  opt-in principle.
-- `retry-with-backoff` — explicit retry policy: max 3 attempts, base 2s,
-  max 30s, full jitter, 60s total budget. Respects `Retry-After`. Hard
-  ceiling, no silent extension.
-- `streaming-output-reader` — read in bounded chunks (head / tail / grep),
-  write a cumulative summary, stop after at most 3 reads.
-- `session-handoff` — at session end, write a structured handoff file
-  (verbatim goal, state references, done/in-progress, next step,
-  critical paths, "might be wrong" risks). Mirrors `state/runtime/recovery.rs`
-  and `rollout_migration_state` migration.
+- `error-recovery-strategy`
+- `retry-with-backoff`
+- `streaming-output-reader`
+- `session-handoff`
 
 Total Skills: 18 (14 from v0.5.0 + 4 new).
 
