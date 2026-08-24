@@ -1,5 +1,19 @@
 # Changelog
 
+## v0.6.4 (2026-08-24) — patch (research milestone)
+
+阶段 1 周 2 完成 — `codex-rs/skills/` 10+ 文件深读,**Plugin 直接对应物**。
+
+### Added
+
+- 6 篇新知识笔记(P-85/86/87/88/89/92),全 🟡→🟢
+- 关键洞察:Codex skills 系统的 selection/loading/parser/mentions/model 直接对应我们 Plugin 结构
+- 新 skill `skill-auto-select` 来源确认(阶段 4 计划)
+
+### Not changed
+
+- 18 skill 主体 / frontmatter / 输出契约
+
 ## v0.6.3 (2026-08-24) — patch (research milestone)
 
 阶段 1 周 1 完成 — `codex-rs/memories/` 21 文件深读,4 个新模式 🟢。

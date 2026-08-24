@@ -28,6 +28,7 @@ work at session end.
 | [`v0.4.0`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v0.4.0) | 12 Skills | 2026-08-24 |
 | [`v0.3.0`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v0.3.0) | 10 Skills | 2026-08-24 |
 | [`v0.2.0`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v0.2.0) | 8 Skills | 2026-08-24 |
+| [`v0.6.4`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v0.6.4) | 18 Skills (research milestone: Phase 1 Week 2) | 2026-08-24 |
 | [`v0.6.3`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v0.6.3) | 18 Skills (research milestone: Phase 1 Week 1) | 2026-08-24 |
 | [`v0.6.2`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v0.6.2) | 18 Skills (patch: catalog corrections + roadmap) | 2026-08-24 |
 | [`v0.6.1`](https://github.com/antianqi/codex-harness-patterns/releases/tag/v0.6.1) | 18 Skills (frontmatter rewrite) | 2026-08-24 |
