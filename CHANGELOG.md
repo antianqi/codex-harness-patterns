@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.6.5 (2026-08-24) — patch (research milestone)
+
+阶段 1 周 3 完成 — `codex-rs/thread-store/` 40+ 文件深读,**完整 session 持久化层**。
+
+### Added
+
+- 6 篇新知识笔记(P-67/68/69-70/71-72/76/77),全 🟡→🟢
+- **🟡 首次清零** — 所有 🟡 模式都进入 🟢
+- 关键洞察:thread-store 提供管理面(sections/projects/queue/search) + 历史面(lineage/migration/modelContext)
+
 ## v0.6.4 (2026-08-24) — patch (research milestone)
 
 阶段 1 周 2 完成 — `codex-rs/skills/` 10+ 文件深读,**Plugin 直接对应物**。
