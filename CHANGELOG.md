@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.0.2 (2026-08-25) — patch (README 4-section disclosure)
+
+按 mcode plugin 提交规范 (`.minimax/memory/user.md`):
+- README 加 4 段独立披露(no credentials / no network / no telemetry / no third-party services)
+- PR #18 body 改为 Design compliance / Validation / Test evidence 三段式
+- 23 skills 主体不变
+
 ## v1.0.1 (2026-08-25) — patch (documentation refresh)
 
 v1.0.0 收口后的文档微调:
