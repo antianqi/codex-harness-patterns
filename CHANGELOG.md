@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.0.3 (2026-08-25) — patch (reviewer feedback: CHANGES_REQUESTED review by hetaoBackend)
+
+响应 PR #18 hetaoBackend 给的 CHANGES_REQUESTED review,3 个 blocking issue 全部修:
+
+- 5 个 SKILL.md 移除 Codex-only 工具参数,改为 pseudocode + mcode 适配注释
+- 2 个 SKILL.md 加 "Host runtime requirements" 段,声明副作用需 user 确认
+- PR-STATUS.md 重写为 v1.0.2 / 23 Skills,记录 reviewer issues + 修复计划
+
 ## v1.0.2 (2026-08-25) — patch (README 4-section disclosure)
 
 按 mcode plugin 提交规范 (`.minimax/memory/user.md`):
